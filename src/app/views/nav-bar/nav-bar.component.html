@@ -8,41 +8,33 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
-              <li class="nav-item"><a class="nav-link" href="#mainNav">{{'navbar.item1' | translate}}</a></li>
+              <li class="nav-item"><a class="nav-link " href="#home">{{'navbar.item1' | translate}}</a></li>
               <li class="nav-item"><a class="nav-link" href="#portfolio">{{'navbar.item2' | translate}}</a></li>
               <li class="nav-item"><a class="nav-link" href="#services">{{'navbar.item3' | translate}}</a></li>
               <li class="nav-item"><a class="nav-link" href="#product">{{'navbar.item4' | translate}}</a></li>
                 <!-- <li class="nav-item"><a class="nav-link" href="#team">{{'navbar.item5' | translate}}</a></li> -->
-                <li class="nav-item" style="position: absolute; top: 50%; transform: translateY(-50%); right: 0;">
-                  <div class="language" role="radiogroup" aria-labelledby="language-switcher1">
-                      <div class="language__container--left language__container--fr">
-                          <input
-                              class="language__control"
-                              type="radio"
-                              id="language1-1"
-                              name="language-switch1"
-                              value="fr"
-                              [checked]="selectedLanguage === 'fr'"
-                              (change)="changeLanguage('fr')"
-                          />
-                          <label class="language__label" for="language1-1">FR</label>
-                      </div>
-                      <div class="language__container--right language__container--en">
-                          <input
-                              class="language__control"
-                              type="radio"
-                              id="language1-2"
-                              name="language-switch1"
-                              value="en"
-                              [checked]="selectedLanguage === 'en'"
-                              (change)="changeLanguage('en')"
-                          />
-                          <label class="language__label" for="language1-2">EN</label>
-                      </div>
+                <li class="nav-item" style="position: absolute; top: 50%; transform: translateY(-50%); right: 0; margin-right: 70px;">
+                  <div class="dropdown language-dropdown">
+                    <button class="btn  dropdown-toggle" type="button" id="languageDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                      <img [src]="selectedLanguage === 'fr' ? '../../../assets/img/fr.svg' : '../../../assets/img/gb.svg'" alt="{{ selectedLanguage === 'fr' ? 'French' : 'English' }}" class="flag-icon">
+                      {{ selectedLanguage.toUpperCase() }}
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                      <li><a class="dropdown-item" href="#" (click)="changeLanguage('fr')"><img src="../../../assets/img/fr.svg" alt="French" class="flag-icon">Français</a></li>
+                      <li><a class="dropdown-item" href="#" (click)="changeLanguage('en')"><img src="../../../assets/img/gb.svg" alt="English" class="flag-icon">Anglais</a></li>
+                    </ul>
                   </div>
+                  
+                  
+                  
+                
+                
+                
+                
               </li>
-           
-          
+              <li class="nav-item faq" style="position: absolute; top: 50%; transform: translateY(-50%); right: 0;margin-right: 20px">
+                <a class="nav-link">FAQ</a>
+              </li>
             </ul>
            
               
@@ -51,15 +43,3 @@
 </nav>
 <!-- Masthead-->
 
-<header class="masthead">
-  <div class="container">
-    <div class="text-with-image">
-      <h1 class="masthead-heading"></h1>
-        <span class="text1"><h1 class="masthead-heading">Bienvenue sur le site </h1>
-        </span>
-        <span class="text2"><h1 class="masthead-heading">HBMI Solutions</h1>
-        </span>
-      <a href="#portfolio" class="btn btn-primary btn-lg">Voir Plus</a>
-    </div>
-  </div>
-</header>

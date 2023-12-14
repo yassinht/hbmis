@@ -1,98 +1,69 @@
-// language variables
-
-$language-width: 55px;
-$language-height: 30px;
-$language-focus: #85bffd;
-$language-border: #ccc;
-$language-hover: #eee;
-$language-checked: #00654B
-;
-
-
-// language styles
-
-.language {
-  width: $language-width * 2;
-  height: $language-height;
-  font-size: 14px;
-  line-height: 1;
-  margin: 0.5em 1em;
+/* Style for the dropdown container */
+.language-dropdown {
+  font-family: Arial, sans-serif;
+  color: #f5f2f2;
+  margin: 40px;
 }
 
-.language__container--left,
-.language__container--right {
-  position: relative;
-  float: left;
-  width: $language-width;
-  height: $language-height;
-  padding: 5px;
+/* Style for the language label */
+.language-label {
+  font-size: 16px;
+  margin-bottom: 8px;
+  display: block;
 }
 
-.language__label {
-  position: absolute;
-  top: 0;
-  left: 0;
-  color: white;
-  width: $language-width;
-  height: $language-height;
-  border: 1px solid $language-border;
-  padding: 7px 8px 5px 0;
-  background-color: #95B0B7;
-  background-repeat: no-repeat;
-  background-position: 7px 7px;
-  background-size: 14px;
-  text-align: right;
-  text-transform: uppercase;
+/* Style for the language select dropdown */
+.language-select {
+  padding: 3px;
+  font-size: 16px;
+  border: 2px solid #ffffff;
+  border-radius: 5px;
+  background-color: #ffffff;
+  width: fit-content;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  outline: none;
 }
 
-.language__container--left .language__label {
-  border-radius: 4px 0 0 4px;
+/* Style for the dropdown arrow icon */
+.language-select::-ms-expand {
+  display: none;
 }
 
-.language__container--right .language__label {
-  border-left: 0;
-  border-radius: 0 4px 4px 0;
+/* Style for when the dropdown is open or focused */
+.language-select:focus,
+.language-select:hover {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
 }
 
-.language__control:hover + .language__label,
-.language__control:focus + .language__label {
-  background-color: $language-hover;
+.flag-icon {
+  width: 24px; /* Adjust flag icon size */
+  margin-right: 5px; /* Add some space between flag and text */
+}
+.dropdown-toggle{
+  background-color: #f5f2f2;
+  color: #4d4c4c;
 }
 
-.language__control:checked + .language__label {
-  background-color: $language-checked;
+.dropdown-toggle:hover{
+  color: #2c898e;
+}/* Style for the FAQ link */
+/* Style for the FAQ link */
+.faq .nav-link {
+  color: #fff; /* Text color */
+  text-decoration: none; /* Remove underline */
+  padding:  6px 20px 6px; /* Padding around the link text */
+  border-radius: 4px; /* Rounded corners */
+  background-color: transparent; /* Transparent background initially */
+  border: 2px solid #48BAC3; /* Border */
+  transition: all 0.3s ease; /* Smooth transition for all properties */
 }
 
-.language__control:focus + .language__label,
-.language__control:checked:focus + .language__label {
-  z-index: 2;
-  outline: 2px solid $language-focus;
-  box-shadow: 0 0 8px $language-focus;
+/* Hover effect for the FAQ link */
+.faq .nav-link:hover {
+  background-color: #ffffff; /* Change background color on hover */
+  color: #fff; /* Change text color on hover */
 }
-
-
-// country flags
-
-.language__container--fr .language__label {
-  background-image: url('../../../assets/img/fr.svg');
-}
-
-.language__container--en .language__label {
-  background-image: url('../../../assets/img/gb.svg');
-}
-/* styles.css ou votre fichier CSS personnalisé */
-/* styles.css or your custom CSS file */
-.hbmis-text {
-  animation: colorChange 2s infinite alternate; /* Adjust the duration and other animation properties as needed */
-}
-
-@keyframes colorChange {
-  0% {
-    color: #005B6E; /* Initial color */
-  }
-  100% {
-    color: #5BAEC2; /* Final color */
-  }
-}
-
-

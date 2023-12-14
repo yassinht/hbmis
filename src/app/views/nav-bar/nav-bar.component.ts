@@ -21,12 +21,8 @@ export class NavBarComponent implements OnInit {
   }
 
   changeLanguage(language: string) {
-    // Set the selected language in the TranslateService
-    this.translateService.setDefaultLang(language);
-
-    // Update selectedLanguage and store it in localStorage
     this.selectedLanguage = language;
-    localStorage.setItem('selectedLanguage', language);
+    // Implement logic to set the language in your application or perform translation-related actions
+    // For example, you might emit an event or call a service to change the language globally in your app
   }
-
 }
