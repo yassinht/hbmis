@@ -19,6 +19,9 @@ import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; // Import BrowserAnimationsModule
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { FormsModule } from '@angular/forms';
+import { FaqComponent } from './views/faq/faq.component';
+import { HeaderComponent } from './views/header/header.component';
+import { LandingComponent } from './views/landing/landing.component';
 
 // Create a function for loading translations
 export function HttpLoaderFactory(http: HttpClient) {
@@ -35,7 +38,10 @@ export function HttpLoaderFactory(http: HttpClient) {
     ProductsComponent,
     ServicesComponent,
     ClientsComponent,
-    VideoCarouselComponent
+    VideoCarouselComponent,
+    FaqComponent,
+    HeaderComponent,
+    LandingComponent
   ],
   imports: [
     BrowserModule,BrowserAnimationsModule,MatSnackBarModule,FormsModule,
