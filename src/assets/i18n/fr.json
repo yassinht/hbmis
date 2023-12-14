@@ -1,0 +1,33 @@
+{
+    "navbar": {
+      "item1": "Accueil",
+      "item2": "À PROPOS",
+      "item3": "SERVICES",
+      "item4": "NOS PRODUITS",
+      "item5": "Équipe",
+      "item6": "CONTACT"
+    },
+    "home": {
+        "greeting": "Bienvenue dans",
+        "hbmis": "HBMIS",
+        "button": "Cliquez sur moi",
+        "def" :"MAGASIN D'ÉQUIPEMENT MÉDICAL"
+      },
+    "about": {
+      "title": "En-tête de l'application",
+      "menu": "Menu"
+    },
+    "products": {
+        "copyright": "© 2023 Votre entreprise"
+      },
+    "team": {
+      "copyright": "© 2023 Votre entreprise"
+    },
+    "contact": {
+        "copyright": "© 2023 Votre entreprise"
+      },
+      "footer": {
+        "copyright": "© 2023 Votre entreprise"
+      }
+  }
+  

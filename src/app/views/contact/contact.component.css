@@ -1,0 +1,25 @@
+/* Style for the scroll-to-top icon */
+.scroll-to-top-icon {
+    position: absolute;
+    left: 50%; /* Position it in the middle horizontally */
+    transform: translateX(-50%); /* Center it horizontally */
+    text-align: center;
+    margin-top: 15px;
+  }
+  
+  .scroll-to-top-icon .icon {
+    background-color: #1f2933; /* Change to your desired background color */
+    color: #fff; /* White icon color */
+    padding: 10px 15px  ; /* Adjust padding as needed */
+    border-radius: 50%;
+    font-size: 24px;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  /* Hover effect - change background color and add a slight scale */
+  .scroll-to-top-icon .icon:hover {
+    background-color: var(--bs-body-color);; /* Change to your desired hover background color */
+    transform: scale(1.1);
+  }
+  
