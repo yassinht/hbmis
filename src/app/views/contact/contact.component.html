@@ -1,62 +1,61 @@
 <section class="page-section" id="contact">
     <div class="container">
         <div class="text-center">
-            <h2 class="section-heading text-uppercase">Contact Us</h2>
-            <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+            <h2 class="section-heading text-uppercase">CONTACTEZ-NOUS</h2>
+            <h3 class="section-subheading text-muted">N'hésitez pas à nous contacter.</h3>
         </div>
-
-        <form id="contactForm" #contactForm="ngForm" (ngSubmit)="sendMail(contactForm)">
+  
+        <form id="contactForm" #contactForm="ngForm" >
             <div class="row align-items-stretch mb-5">
               <div class="col-md-6">
                 <div class="form-group">
-                  <input class="form-control" id="name" type="text" placeholder="Your Name *" name="name" [(ngModel)]="formData.name" required #name="ngModel" />
-                  <div *ngIf="name.invalid && (name.touched || name.dirty)" class="text-danger">A name is required.</div>
+                  <input class="form-control" id="name" type="text" placeholder="Votre nom *" name="name" [(ngModel)]="formData.name" required #name="ngModel" />
+                  <div *ngIf="name.invalid && (name.touched || name.dirty)" class="text-danger">Un nom est requis.</div>
                 </div>
                 <div class="form-group">
-                  <input class="form-control" id="email" type="email" placeholder="Your Email *" name="email" [(ngModel)]="formData.email" required email #email="ngModel" />
+                  <input class="form-control" id="email" type="email" placeholder="Votre e-mail *" name="email" [(ngModel)]="formData.email" required email #email="ngModel" />
                   <div *ngIf="email.invalid && (email.touched || email.dirty)" class="text-danger">
-                    <div *ngIf="email.errors.required">An email is required.</div>
-                    <div *ngIf="email.errors.email">Email is not valid.</div>
+                    <div *ngIf="email.errors.required">Un e-mail est requis.</div>
+                    <div *ngIf="email.errors.email">L'e-mail n'est pas valide.</div>
                   </div>
                 </div>
                 <div class="form-group mb-md-0">
-                  <input class="form-control" id="phone" type="tel" placeholder="Your Phone *" name="phone" [(ngModel)]="formData.phone" required #phone="ngModel" />
-                  <div *ngIf="phone.invalid && (phone.touched || phone.dirty)" class="text-danger">A phone number is required.</div>
+                  <input class="form-control" id="phone" type="tel" placeholder="Votre téléphone *" name="phone" [(ngModel)]="formData.phone" required #phone="ngModel" />
+                  <div *ngIf="phone.invalid && (phone.touched || phone.dirty)" class="text-danger">Un numéro de téléphone est requis.</div>
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="form-group form-group-textarea mb-md-0">
-                  <textarea class="form-control" id="message" placeholder="Your Message *" name="message" [(ngModel)]="formData.message" required #message="ngModel"></textarea>
-                  <div *ngIf="message.invalid && (message.touched || message.dirty)" class="text-danger">A message is required.</div>
+                  <textarea class="form-control" id="message" placeholder="Votre message *" name="message" [(ngModel)]="formData.message" required #message="ngModel"></textarea>
+                  <div *ngIf="message.invalid && (message.touched || message.dirty)" class="text-danger">Un message est requis.</div>
                 </div>
               </div>
             </div>
           
             <div class="d-none" id="submitSuccessMessage">
               <div class="text-center text-white mb-3">
-                <div class="fw-bolder">Form submission successful!</div>
-                To activate this form, sign up at
+                <div class="fw-bolder">Envoi du formulaire réussi !</div>
+                Pour activer ce formulaire, inscrivez-vous sur
                 <br />
               </div>
             </div>
           
             <div class="d-none" id="submitErrorMessage">
-              <div class="text-center text-danger mb-3">Error sending message!</div>
+              <div class="text-center text-danger mb-3">Erreur lors de l'envoi du message !</div>
             </div>
           
             <div class="text-center">
-              <button class="btn btn-primary btn-xl text-uppercase" id="submitButton" type="submit" [disabled]="!contactForm.form.valid">Send Message</button>
-            </div>
+                <button id="submitButton" class="btn btn-primary btn-xl text-uppercase">
+                    <span aria-hidden="true">Submit</span>
+                    <span class="sr-only">Submit Form</span>
+                  </button>
+                  
+                              </div>
           </form>
-          
-          
-          
-      
-          
     </div>
     <div class="scroll-to-top-icon">
         <a href="#" class="icon">
           <i class="fas fa-arrow-up"></i>
         </a>
       </div>
-</section>
+  </section>

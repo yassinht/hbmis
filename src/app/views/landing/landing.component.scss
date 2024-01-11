@@ -1,0 +1,267 @@
+/* Styles for text alignment and coloring */
+.color-blue {
+  color: #000E44;
+}
+
+.color-green {
+  color: #48BAC3;
+}
+
+/* Adjustments to align elements on new lines */
+.masthead-heading {
+  text-align: left;
+  margin: 0;
+  padding: 0;
+}
+
+.text1,
+.text2 {
+  display: block; /* Display each span on a new line */
+  margin-bottom: 10px; /* Adjust the margin as needed */
+}
+
+.description {
+  text-align: center;
+  margin-top: 20px;
+}
+
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+justify-content: center;
+  }
+  
+  .text {
+    order: 1;
+    padding: 20px;
+  }
+  
+  .video {
+    order: 2;
+    padding-top:40px;
+    margin-left: 20px;
+  }
+  
+  @media (min-width: 768px) {
+    .container {
+      flex-direction: row;
+      
+    }
+  
+    .text,
+    .video {
+      flex: 1;
+      order: initial;
+    }
+  }
+  
+  p{
+    color:#232323;
+    font-size: 16px;
+    text-align: justify;
+  }
+  .about-list{
+    list-style: none;
+    text-align: left;
+    padding: 0% !important;
+  }
+
+  .about-list li {
+ margin-bottom:10px;
+  }
+
+  .about-list li span{
+    color: #232323;
+     }
+     iframe {
+      width: 600px; /* Default width */
+      height: 300px; /* Default height */
+    }
+
+
+     @media screen and (max-width: 480px) {
+      div {max-width: 383px;}    
+      iframe {
+        width: 100%; /* Change width to fill the container */
+        height: auto; /* Set height to auto to maintain aspect ratio */
+      }
+    }
+
+
+    article {
+        --img-scale: 1.001;
+        --title-color: black;
+        --link-icon-translate: -20px;
+        --link-icon-opacity: 0;
+        position: relative;
+        border-radius: 16px;
+        box-shadow: none;
+        background: #fff;
+        transform-origin: center;
+        transition: all 0.4s ease-in-out;
+        overflow: hidden;
+      }
+      
+      article a::after {
+        position: absolute;
+        inset-block: 0;
+        inset-inline: 0;
+        cursor: pointer;
+        content: "";
+      }
+      
+      /* basic article elements styling */
+      article h2 {
+        margin: 0 0 18px 0;
+        font-family: "Bebas Neue", cursive;
+        font-size: 1.9rem;
+        letter-spacing: 0.06em;
+        color: var(--title-color);
+        transition: color 0.3s ease-out;
+      }
+      
+      figure {
+        margin: 0;
+        padding: 0;
+        aspect-ratio: 16 / 9;
+        overflow: hidden;
+      }
+      
+      article img {
+        max-width: 100%;
+        transform-origin: center;
+        transform: scale(var(--img-scale));
+        transition: transform 0.4s ease-in-out;
+      }
+      
+      .article-body {
+        padding: 24px;
+      }
+      
+      article a {
+        display: inline-flex;
+        align-items: center;
+        text-decoration: none;
+        color: #28666e;
+      }
+      
+      article a:focus {
+        outline: 1px dotted #28666e;
+      }
+      
+      article a .icon {
+        min-width: 24px;
+        width: 24px;
+        height: 24px;
+        margin-left: 5px;
+        transform: translateX(var(--link-icon-translate));
+        opacity: var(--link-icon-opacity);
+        transition: all 0.3s;
+      }
+      
+      /* using the has() relational pseudo selector to update our custom properties */
+      article:has(:hover, :focus) {
+        --img-scale: 1.1;
+        --title-color: #28666e;
+        --link-icon-translate: 0;
+        --link-icon-opacity: 1;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+      }
+      
+      
+      /************************ 
+      Generic layout (demo looks)
+      **************************/
+      
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+      
+      body {
+        margin: 0;
+        padding: 48px 0;
+        font-family: "Figtree", sans-serif;
+        font-size: 1.2rem;
+        line-height: 1.6rem;
+        background-image: linear-gradient(45deg, #7c9885, #b5b682);
+        min-height: 100vh;
+      }
+      
+      .articles {
+        display: grid;
+        max-width: 1200px;
+        margin-inline: auto;
+        padding-inline: 24px;
+        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+        gap: 24px;
+      }
+      
+      @media screen and (max-width: 960px) {
+        article {
+          container: card/inline-size;
+        }
+        .article-body p {
+          display: none;
+        }
+      }
+      @container card (min-width: 380px) {
+        .article-wrapper {
+          display: grid;
+          grid-template-columns: 100px 1fr;
+          gap: 16px;
+        }
+        .article-body {
+          padding-left: 0;
+        }
+        figure {
+          width: 100%;
+          height: 100%;
+          overflow: hidden;
+        }
+        figure img {
+          height: 100%;
+          aspect-ratio: 1;
+          object-fit: cover;
+        }
+      }
+      
+      .sr-only:not(:focus):not(:active) {
+        clip: rect(0 0 0 0); 
+        clip-path: inset(50%);
+        height: 1px;
+        overflow: hidden;
+        position: absolute;
+        white-space: nowrap; 
+        width: 1px;
+      }
+      /* Style for the scroll-to-top icon */
+.scroll-to-top-icon {
+    position: absolute;
+    left: 50%; /* Position it in the middle horizontally */
+    transform: translateX(-50%); /* Center it horizontally */
+    text-align: center;
+    margin-top: 15px;
+  }
+  
+  .scroll-to-top-icon .icon {
+    background-color: #1f2933; /* Change to your desired background color */
+    color: #fff; /* White icon color */
+    padding: 10px 15px  ; /* Adjust padding as needed */
+    border-radius: 50%;
+    font-size: 24px;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  /* Hover effect - change background color and add a slight scale */
+  .scroll-to-top-icon .icon:hover {
+    background-color: var(--bs-body-color);; /* Change to your desired hover background color */
+    transform: scale(1.1);
+  }
+  
+
+  

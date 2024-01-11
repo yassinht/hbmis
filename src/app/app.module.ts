@@ -1,17 +1,14 @@
+import { TeamComponent } from './views/team/team.component';
+import { VideoCarouselComponent } from './video-carousel/video-carousel.component';
+import { HeaderComponent } from './views/header/header.component';
+import { AboutComponent } from './views/about/about.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavBarComponent } from './views/nav-bar/nav-bar.component';
-import { ContactComponent } from './views/contact/contact.component';
 import { FooterComponent } from './views/footer/footer.component';
-import { TeamComponent } from './views/team/team.component';
-import { AboutComponent } from './views/about/about.component';
-import { ProductsComponent } from './views/products/products.component';
 import { ServicesComponent } from './views/services/services.component';
-import { ClientsComponent } from './views/clients/clients.component';
-import { VideoCarouselComponent } from './video-carousel/video-carousel.component';
-import { CarouselModule } from 'ngx-owl-carousel-o';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
@@ -20,8 +17,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; 
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { FormsModule } from '@angular/forms';
 import { FaqComponent } from './views/faq/faq.component';
-import { HeaderComponent } from './views/header/header.component';
 import { LandingComponent } from './views/landing/landing.component';
+import { ContactComponent } from './views/contact/contact.component';
+import { ProductsComponent } from './views/products/products.component';
 
 // Create a function for loading translations
 export function HttpLoaderFactory(http: HttpClient) {
@@ -31,20 +29,19 @@ export function HttpLoaderFactory(http: HttpClient) {
   declarations: [
     AppComponent,
     NavBarComponent,
-    ContactComponent,
     FooterComponent,
-    TeamComponent,
-    AboutComponent,
-    ProductsComponent,
+    ContactComponent,
     ServicesComponent,
-    ClientsComponent,
-    VideoCarouselComponent,
-    FaqComponent,
+    AboutComponent,
     HeaderComponent,
-    LandingComponent
+    ProductsComponent,
+    FaqComponent,
+    LandingComponent,
+    VideoCarouselComponent,
+    TeamComponent
   ],
   imports: [
-    BrowserModule,BrowserAnimationsModule,MatSnackBarModule,FormsModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),BrowserAnimationsModule,MatSnackBarModule,FormsModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,

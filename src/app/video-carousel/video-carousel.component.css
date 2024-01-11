@@ -19,6 +19,7 @@ justify-content: center;
   @media (min-width: 768px) {
     .container {
       flex-direction: row;
+      
     }
   
     .text,
@@ -46,3 +47,18 @@ justify-content: center;
   .about-list li span{
     color: #232323;
      }
+     iframe {
+      width: 600px; /* Default width */
+      height: 300px; /* Default height */
+    }
+
+
+     @media screen and (max-width: 480px) {
+      div {max-width: 383px;}    
+      iframe {
+        width: 100%; /* Change width to fill the container */
+        height: auto; /* Set height to auto to maintain aspect ratio */
+      }
+    }
+
+
