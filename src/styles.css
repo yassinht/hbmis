@@ -11114,7 +11114,7 @@ animation: slideInFromLeft 1.5s ease-in-out; /* Apply the slide-in animation */
   /* Additional media query for smaller phones like iPhone SE */
   @media (max-width: 391px) {
     header.masthead {
-      padding-top: 100dvh
+      padding-top:    100dvh
     ;
     }
     header.masthead::after {
@@ -11123,16 +11123,63 @@ animation: slideInFromLeft 1.5s ease-in-out; /* Apply the slide-in animation */
     }
 /* Apply the animation to the .text-with-image element */
 .text-with-image {
-  top: 50%;
-  left: 50%;
+  top: 70%;
   transform: translate(-50%, -50%);
   text-align: center;
-  width: 80%; /* Adjust the width of the text container */
+  width: 100%; /* Adjust the width of the text container */
   z-index: 2;
   color: #fff;
-  animation: slideInFromLeft 1.5s ease-in-out; /* Apply the slide-in animation */
+  animation: none ;
+  /* Add a blurred background */
+  backdrop-filter: blur(5px);
+  background-color: rgba(255, 255, 255, 0.5); 
+  border-radius: 50px; 
+
+  /* background-color: #fdfdfe; */
 }
 
+/* Styles for text alignment and coloring */
+.color-blue {
+  color: #000E44;
+}
+
+.color-green {
+  color: #48BAC3;
+align-items: center;}
+
+/* Adjustments to align elements on the same line */
+.masthead-heading {
+  display: block;
+  align-items: center;
+  text-align: center;
+  padding: 0;
+}
+
+.text1 {
+  margin-right: 10px; /* Add margin between text1 and text2 */
+  color: #000E44;
+  font-size: 40px;
+
+}
+
+.text2 {
+  display: inline-block;
+  align-items: center; /* Align text2 with text1 */ 
+  margin-right: 10px;
+  font-size: 30px;
+
+}
+
+.description {
+  text-align: left;
+  margin-top: 20px;
+  color: #066173;
+}
+.btn-lg{
+  display: none;
+}
+
+/* Adjustments to align elements on the same line */
   }
 
     /* Additional media query for smaller phones like iPhone SE */

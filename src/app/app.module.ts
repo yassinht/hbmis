@@ -20,6 +20,7 @@ import { FaqComponent } from './views/faq/faq.component';
 import { LandingComponent } from './views/landing/landing.component';
 import { ContactComponent } from './views/contact/contact.component';
 import { ProductsComponent } from './views/products/products.component';
+import { ClientsComponent } from './views/clients/clients.component';
 
 // Create a function for loading translations
 export function HttpLoaderFactory(http: HttpClient) {
@@ -38,7 +39,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     FaqComponent,
     LandingComponent,
     VideoCarouselComponent,
-    TeamComponent
+    TeamComponent,ClientsComponent,
+  
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),BrowserAnimationsModule,MatSnackBarModule,FormsModule,
