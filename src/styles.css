@@ -10973,6 +10973,13 @@ p {
     margin-right: 0;
   }
 }
+
+@media (max-width:575px){
+  .navbar > .container{
+    margin: 0px 10px;
+  }
+
+}
 header.masthead {
   position: relative;
   padding-top: 100dvh;
@@ -11056,164 +11063,93 @@ header.masthead .masthead-heading {
   color:#000E44;
 } */
 /* Adjust layout for smaller screens */
-@media (max-width: 1007.98px) {
-  header.masthead {
-    position: relative;
-    padding-bottom: 40%; /* Adjust the aspect ratio of the masthead */
-    overflow: hidden;
-  }
-  .text-with-image {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    width: 80%; /* Adjust the width of the text container */
-    z-index: 2;
-    color: #fff;
-    animation: slideInFromLeft 1.5s ease-in-out; /* Apply the slide-in animation */
-  }
-
-  header.masthead img {
-    position: absolute;
-    bottom: 0; /* Position the image at the bottom */
-    right: 5%; /* Adjust the right position as needed */
-    width: 25%; /* Adjust the width of the image */
-    max-width: 100px; /* Set a maximum width for responsiveness */
-    height: auto; /* Maintain aspect ratio */
-    object-fit: cover;
-    z-index: 1;
-    animation: fadeIn 1.5s ease-in-out; /* Apply the fade-in animation */
-  }
 
 
-}
 
-/* New media query for devices between 400px and 767.98px */
-@media (min-width: 400px) and (max-width: 820px) {
-  header.masthead {
-    padding-top: 100dvh;
-  }
+@media (max-width: 1490px) {
   header.masthead::after {
-    left: 1dvh; /* Adjust the left position as needed */
-    width: 100%; /* Adjust the width of the image */
-  }
-/* Apply the animation to the .text-with-image element */
-.text-with-image {
-top: 50%;
-left: 50%;
-transform: translate(-50%, -50%);
-text-align: center;
-width: 80%; /* Adjust the width of the text container */
-z-index: 2;
-color: #fff;
-animation: slideInFromLeft 1.5s ease-in-out; /* Apply the slide-in animation */
-}
-
-}
-  /* Additional media query for smaller phones like iPhone SE */
-  @media (max-width: 391px) {
-    header.masthead {
-      padding-top:    100dvh
-    ;
-    }
-    header.masthead::after {
-      left: 1dvh; /* Adjust the left position as needed */
-      width: 100%; /* Adjust the width of the image */
-    }
-/* Apply the animation to the .text-with-image element */
-.text-with-image {
-  top: 70%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  width: 100%; /* Adjust the width of the text container */
-  z-index: 2;
-  color: #fff;
-  animation: none ;
-  /* Add a blurred background */
-  backdrop-filter: blur(5px);
-  background-color: rgba(255, 255, 255, 0.5); 
-  border-radius: 50px; 
-
-  /* background-color: #fdfdfe; */
-}
-
-/* Styles for text alignment and coloring */
-.color-blue {
-  color: #000E44;
-}
-
-.color-green {
-  color: #48BAC3;
-align-items: center;}
-
-/* Adjustments to align elements on the same line */
-.masthead-heading {
-  display: block;
-  align-items: center;
-  text-align: center;
-  padding: 0;
-}
-
-.text1 {
-  margin-right: 10px; /* Add margin between text1 and text2 */
-  color: #000E44;
-  font-size: 40px;
-
-}
-
-.text2 {
-  display: inline-block;
-  align-items: center; /* Align text2 with text1 */ 
-  margin-right: 10px;
-  font-size: 30px;
-
-}
-
-.description {
-  text-align: left;
-  margin-top: 20px;
-  color: #066173;
-}
-.btn-lg{
-  display: none;
-}
-
-/* Adjustments to align elements on the same line */
+    right: 0dvh;
+    width:  70dvh;
+  height: 90dvh;
   }
 
-    /* Additional media query for smaller phones like iPhone SE */
-    @media (max-width: 281px) {
-      header.masthead {
-        position: relative;
-        padding-top: 100dvh;
-        text-align: center;
-        width:  60dvh;
-        color: #fff;
-        background-image: url("../src/assets/img/Mask.webp");
-        background-repeat: no-repeat;
-        background-attachment: scroll;
-        background-position:0px 20%; /* 50 pixels from left, 70% from top */
-        background-size: cover;
-      }
-      header.masthead::after {
-        width: 100%; /* Adjust the width of the image */
-      }
-  /* Apply the animation to the .text-with-image element */
-  .text-with-image {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    width: 80%; /* Adjust the width of the text container */
-    z-index: 2;
-    color: #fff;
-    animation: slideInFromLeft 1.5s ease-in-out; /* Apply the slide-in animation */
+}
+
+
+@media (max-width: 1267.00px) {
+  header.masthead::after {
+    right: 0dvh;
+    width: 80%;
+  }
+
+}
+
+
+
+
+
+
+@media (max-width: 1007.98px) {
+ 
+  .text1 {
+    margin-right: 10px; /* Add margin between text1 and text2 */
+    color: #000E44;
+    font-size: 40px;
+  
   }
   
+  .text2 {
+    display: inline-block;
+    align-items: center; /* Align text2 with text1 */ 
+    margin-right: 10px;
+    font-size: 30px;
+  
+  }
+  
+  .p {
+    text-align: left;
+    color: #066173;
+
+  }
+
+}
+
+
+ /* Additional media query for smaller phones like iPhone SE */
+ @media (max-width: 700px) {
+  .text-with-image {
+    position: absolute; /* Use position absolute for centering */
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 90%;
+    z-index: 2;
+    color: #fff;
+    animation: none;
+    padding: 0.5em; /* Use 'em' for better responsiveness */
+    /* Add a blurred background */
+    backdrop-filter: blur(5px);
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 20px; /* Adjust the border-radius for smaller screens */
+  }
+  .btn-lg{
+    display: none;
+  }
+  .text1{
+    font-size: 1.25rem; 
+    margin-bottom: -50px;
+  }
+    .text2{
+      font-size: 2.25rem; 
+      margin-bottom: -30px;
+      margin-top: -10px;
+
+
     }
+}
 
-
+ 
 
 #portfolio .portfolio-item {
   max-width: 26rem;

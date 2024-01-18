@@ -157,4 +157,24 @@ ul {
 .footer-menu li a {
   font-size: 14px;
   color: #878787;
+}    /* Custom styles for each social media icon */
+.facebook-bg {
+    background-color: #1877f2;
+    color: #fff;
+    padding: 5px 8px;
+    border-radius: 50%;
+}
+
+.twitter-bg {
+    background-color: #1da1f2;
+    color: #fff;
+    padding: 5px;
+    border-radius: 50%;
+}
+
+.google-bg {
+    background-color: #dd4b39;
+    color: #fff;
+    padding: 5px;
+    border-radius: 50%;
 }
