@@ -21,6 +21,7 @@ import { LandingComponent } from './views/landing/landing.component';
 import { ContactComponent } from './views/contact/contact.component';
 import { ProductsComponent } from './views/products/products.component';
 import { ClientsComponent } from './views/clients/clients.component';
+import { ProductsDetailsComponent } from './views/deatails/products-details/products-details.component';
 // Create a function for loading translations
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -38,7 +39,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     FaqComponent,
     LandingComponent,
     VideoCarouselComponent,
-    TeamComponent,ClientsComponent,
+    TeamComponent,ClientsComponent, ProductsDetailsComponent,
   
   ],
   imports: [
