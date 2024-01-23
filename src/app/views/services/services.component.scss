@@ -12,7 +12,7 @@
   width: 100%;
   height: 100%;
   padding: 2em 1.5em;
-  background: linear-gradient(#ffffff 50%, #48BAC3 50%);
+  background: linear-gradient(#ffffff 50%, #15373a 50%);
   background-size: 100% 200%;
   background-position: 0 2.5%;
   border-radius: 5px;
@@ -33,7 +33,7 @@ p {
   letter-spacing: 0.03em;
 }
 .icon-wrapper {
-  background-color: #48BAC3;
+  background-color: #328288;
   position: relative;
   margin: auto;
   font-size: 30px;
@@ -50,7 +50,7 @@ p {
 }
 .card:hover .icon-wrapper {
   background-color: #ffffff;
-  color: #48BAC3;
+  color: #2b6f75;
 }
 .card:hover h3 {
   color: #ffffff;

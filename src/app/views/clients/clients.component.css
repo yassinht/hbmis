@@ -8,7 +8,7 @@
     --grad-color-1: 0, 180, 250;
     --grad-color-2: 21, 120, 255;
   
-    --base-font-size: 1.6rem;
+    --base-font-size: 0.6rem;
   
     --heading-font-size-1: 4rem;
     --heading-font-size-2: 3.2rem;
@@ -243,171 +243,76 @@
     color: var(--white-shade-1);
     background-color: var(--base-shade-1);
   }
-  /*------ Section: Testimonials ------*/
-  .testimonial {
-    background-image: linear-gradient(
-        45deg,
-        rgba(var(--grad-color-1), 0.8),
-        rgba(var(--grad-color-2), 0.8)
-      ),
-      url(../../../assets/dd.png);
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-  }
-  .testimonial h2,
-  .testimonial .section-desc {
-    color: var(--white-shade-1);
-  }
-  .testimonial .row {
-    align-items: stretch;
-  }
-  .testimonial .column {
-    background-color: var(--white-shade-1);
-    padding: 4rem 3rem;
-    text-align: center;
-    border-radius: var(--border-radius-1);
-    display: flex;
-    flex-direction: column;
-  }
-  .testimonial-image {
-    height: 14rem;
-    width: 14rem;
-    margin: auto;
-    padding: 0.9rem;
-    background: linear-gradient(
-      var(--white-shade-1) 50%,
-      var(--base-shade-1) 50%
-    );
-    border-radius: 50%;
-  }
-  .testimonial-image img {
-    width: 100%;
-    border-radius: 50%;
-  }
-  .testimonial .column p {
-    margin: 4rem 0;
-    flex-grow: 1;
-  }
-  /*------ Section: Download App ------*/
-  .download-app .column:nth-child(1) {
-    display: flex;
-    justify-content: center;
-  }
-  .download-app .column:nth-child(2) {
-    padding: 0 2rem;
-  }
-  .download-app img {
-    display: block;
-    width: 45%;
-  }
-  .app-feature {
-    border-bottom: 1.5px dashed rgba(var(--grad-color-1), 0.4);
-  }
-  .app-feature:not(:last-child) {
-    margin-bottom: 1.5rem;
-  }
-  .app-feature div {
-    display: flex;
-    gap: 2rem;
-  }
-  .app-feature p {
-    margin-bottom: 1.5rem;
-  }
-  .download-app .fas {
-    display: inline-block;
-    background-color: var(--white-shade-2);
-    height: 5rem;
-    width: 5rem;
-    border-radius: 50%;
-    font-size: 2rem;
-    text-align: center;
-    padding: 1.5rem;
-    color: var(--base-shade-1);
-  }
-  .download-app h3 {
-    display: inline-block;
-  }
-  .download-btns {
-    display: flex;
-  }
-  .download-btns a {
-    display: inline;
-    text-align: center;
-  }
-  .download-btns a img {
-    display: inline-block;
-    width: 70%;
-  }
-  /*------ Section: Footer ------*/
-  footer {
-    background-color: var(--black-shade-1);
-  }
-  footer h3 {
-    margin: 0;
-  }
-  footer h3,
-  footer h4 {
-    color: var(--white-shade-1);
-    text-align: center;
-  }
-  footer .row {
-    margin-bottom: 6rem;
-  }
-  .footer-about {
-    display: flex;
-    flex-direction: column;
-    gap: 3rem;
-    padding-bottom: 3rem;
-    border-bottom: 2px solid var(--white-shade-1);
-  }
-  .social-links {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    gap: 5rem;
-  }
-  .social-links a {
-    font-size: 3rem;
-    text-decoration: none;
-    color: var(--white-shade-1);
-  }
-  footer p {
-    text-align: center;
-  }
   
-  /*------ Scroll Top Button ------*/
-  #scroll-top {
-    position: fixed;
-    display: none;
-    place-items: center;
-    height: 5rem;
-    width: 5rem;
-    right: 3rem;
-    bottom: 3rem;
-    background-color: var(--base-shade-1);
-    color: var(--white-shade-1);
-    border: none;
-    outline: none;
-    font-size: var(--heading-font-size-3);
-    border-radius: var(--border-radius-2);
-    box-shadow: 0 1.5rem 2rem rgba(0, 0, 0, 0.2);
+/* Default styles for all screen sizes */
+h2 {
+  line-height: 1.5; /* You can use unitless values for line-height */
+  max-width: 100%; /* Ensures the text does not overflow its container */
+  color: #ffffff;
+
+}
+
+/* Additional styles for responsiveness */
+@media only screen and (max-width: 767px) {
+  h2 {
+    font-size: 1.5rem; /* Adjust the font size for smaller screens */
   }
-  
+}
 
+h3{
+  font-size: medium;
+  padding: 2px;
+}
+p{
+  font-size: medium;
+  margin: 0px !important;
+  padding: 2px;
+  line-height: 30px ;
 
+}
+.row {
+  font-size: 22.5%;
+  display: flex;
+  flex-wrap: wrap; /* Allows items to wrap to the next line */
+  justify-content: space-between;
+  gap: 1.5rem; /* Adjust the gap between items */
+}
+
+.column {
+  width: 100%; /* Full width by default, will be adjusted in media queries */
+  box-sizing: border-box; /* Include padding and border in width calculation */
+  padding: 25px;
+}
+
+/* Styles for small screens (up to 767px) */
+@media only screen and (max-width: 767px) {
+  .column {
+    width: 100%; /* One item per line on small screens */
+  }
+ .testimonial-image{
+  margin-bottom: 0px;
+ }
+}
+
+/* Styles for medium screens (768px to 1023px) */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
   .row {
-    font-size: 2rem;
-    scroll-behavior: smooth;
+    justify-content: center; /* Center items on medium screens */
   }
 
-  .h1{
-    font-size: 1rem;
-    margin-bottom: 0px;
-
+  .column {
+    width: 48%; /* Two items per line on medium screens */
   }
 
-  p{
-    font-size: 1rem;
-
+  .column:nth-child(2) {
+    display: none; /* Hide the second item on medium screens */
   }
+}
+
+/* Styles for large screens (1024px and above) */
+@media only screen and (min-width: 1024px) {
+  .column {
+    width: 31%; /* Three items per line on large screens */
+  }
+}
+

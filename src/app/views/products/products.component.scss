@@ -1,218 +1,181 @@
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@800&display=swap');
-
-// /!\ IMPORTANT: this variable precises the number of slides contained in the slider.
-// if you add/remove images, make sure that this variable is up to date so the buttons,
-// the disposition of elements and the animations work correctly.
-$nb-slides: 6;
-
-// THE BASICS
-
-
-.line {
-  width: 100%;
-}
-
-.flex {
-  display: flex;
-}
-
-.center {
-  @extend .flex;
-  align-items: center; // horizontal
-  justify-content: center; // vertical
-}
-
-
-.carousel-wrapper {
-  @extend .flex;
+@mixin aspect-ratio($width, $height) {
   position: relative;
-  max-width: 90dvh;
-  margin: 50px;
-
-  input {
-    display: none;
+    
+  &:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: ($height / $width) * 100%;
+  }
+    
+  > img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
   }
 }
 
+// Styling
 
-// CAROUSEL / SLIDER
+section {
+    background: #F4F4F4;
+    padding: 50px 0;
+}
+
+.container {
+    max-width: 1044px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
 .carousel {
-  @extend .line;
-  overflow: hidden;
-  border-radius: 15px;
-
-  ul {
-    @extend .center;
+    display: block;
+    text-align: left;
     position: relative;
-    list-style: none;
-    overflow: hidden;
+    margin-bottom: 22px;
+    
+    > input {
+        clip: rect(1px, 1px, 1px, 1px);
+        clip-path: inset(50%);
+        height: 1px;
+        width: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        
+        &:nth-of-type(6):checked ~ .carousel__slides .carousel__slide:first-of-type { margin-left: -500%; }
+        &:nth-of-type(5):checked ~ .carousel__slides .carousel__slide:first-of-type { margin-left: -400%; }
+        &:nth-of-type(4):checked ~ .carousel__slides .carousel__slide:first-of-type { margin-left: -300%; }
+        &:nth-of-type(3):checked ~ .carousel__slides .carousel__slide:first-of-type { margin-left: -200%; }
+        &:nth-of-type(2):checked ~ .carousel__slides .carousel__slide:first-of-type { margin-left: -100%; }
+        &:nth-of-type(1):checked ~ .carousel__slides .carousel__slide:first-of-type { margin-left: 0%; }
+        
+        &:nth-of-type(1):checked ~ .carousel__thumbnails li:nth-of-type(1) { box-shadow: 0px 0px 0px 5px rgba(0,0,255,0.5); }
+        &:nth-of-type(2):checked ~ .carousel__thumbnails li:nth-of-type(2) { box-shadow: 0px 0px 0px 5px rgba(0,0,255,0.5); }
+        &:nth-of-type(3):checked ~ .carousel__thumbnails li:nth-of-type(3) { box-shadow: 0px 0px 0px 5px rgba(0,0,255,0.5); }
+        &:nth-of-type(4):checked ~ .carousel__thumbnails li:nth-of-type(4) { box-shadow: 0px 0px 0px 5px rgba(0,0,255,0.5); }
+        &:nth-of-type(5):checked ~ .carousel__thumbnails li:nth-of-type(5) { box-shadow: 0px 0px 0px 5px rgba(0,0,255,0.5); }
+        &:nth-of-type(6):checked ~ .carousel__thumbnails li:nth-of-type(6) { box-shadow: 0px 0px 0px 5px rgba(0,0,255,0.5); }
+    }
+}
 
-    margin: 0;
+.carousel__slides {
+    position: relative;
+    z-index: 1;
     padding: 0;
+    margin: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    box-sizing: border-box;
+    display: flex;
+}
+
+.carousel__slide {
+    position: relative;
+    display: block;
+    flex: 1 0 100%;
+    width: 100%;
     height: 100%;
-    width: 100% * $nb-slides;
-
-    transition: left .8s cubic-bezier(0.77, 0, 0.175, 1);
-  }
-
-  li {
-    @extend .line;
-
+    overflow: hidden;
+    transition: all 300ms ease-out;
+    vertical-align: top;
+    box-sizing: border-box;
+    white-space: normal;
+    
+    figure {
+        display: flex;
+        margin: 0;
+    }
+    
+    div {
+        @include aspect-ratio(3, 2);
+        width: 100%;
+    }
+    
     img {
-      @extend .line;
-      border-radius: 15px;
+        display: block;
+        flex: 1 1 auto;
+        object-fit: cover;
     }
-  }
-}
-
-
-// NAVIGATION DOTS
-.nav-dot {
-  $dot-size: 15px;
-  position: absolute;
-  cursor: pointer;
-
-  margin-left: -$dot-size / 2;
-  bottom: -$dot-size * 1.5;
-  width: $dot-size;
-  height: $dot-size;
-
-  opacity: .5;
-  background-color: white;
-  border-radius: 50%;
-  transition: .4s;
-
-  &:hover {
-    opacity: .8;
-    transform: scale(1.2);
-  }
-
-  &:active {
-    transform: scale(0.9);
-  }
-}
-
-// goes from 1 to 5.
-@for $n from 1 through $nb-slides {
-  // arranges the navigation dots horizontally
-  .nav-dot[for=slide#{$n}] {
-    left: 50% + ((($n - 1) - (($nb-slides - 1)/ 2)) * 5%);
-  }
-
-  #slide#{$n}:checked {
-    // moves the carousel to the right slide
-    & ~ .carousel ul { left: -100% * ($n - 1) }
-
-    // highlights the selected navigation dot
-    & ~ .nav-dot[for=slide#{$n}] {
-      opacity: 1;
+    
+    figcaption {
+        align-self: flex-end;
+        padding: 20px 20px 0 20px;
+        flex: 0 0 auto;
+        width: 25%;
+        min-width: 150px;
     }
-  }
-}
-
-
-// ARROWS
-%arrow {
-  $arrow-size: 50px;
-  display: none;  // hidden by default
-  position: absolute;
-
-  cursor: pointer;
-  font-weight: bolder;
-  text-shadow: 0 0 7.5px rgba($color: black, $alpha: .7);
-
-  top: 50%;
-  z-index: 1;
-  opacity: .7;
-  margin-top: -$arrow-size / 2;
-  height: $arrow-size;
-  font-size: $arrow-size;
-  transition: .2s;
-
-  &:hover {
-    opacity: 1;
-    transform: scale(1.2);
-  }
-
-  &:active {
-    transform: scale(0.9);
-  }
-}
-
-.left-arrow {
-  @extend %arrow;
-  left: 15px;
-}
-
-.right-arrow {
-  @extend %arrow;
-  right: 15px;
-}
-
-@function custom-modulo($n) {
-  // this function returns '$n % $nb-slides', except that if the result is 0,
-  // '$nb-slides' is returned.
-  // for exemple, for $nb-slides = 4, possible values are {1, 2, 3, 4}
-  // (and not {0, 1, 2, 3}).
-  @return 1 + ($nb-slides + (($n - 1) % $nb-slides)) % $nb-slides;
-}
-
-@for $n from 1 through $nb-slides {
-  // when the nth slide is selected,
-  // displays the left-arrow that goes to the (n-1)th slide
-  // and the right arrow that goes to the (n+1)th slide.
-  // don't worry, it loops thanks to the 'custom-modulo' function !
-
-  #slide#{$n}:checked {
-    & ~ .left-arrow[for=slide#{custom-modulo($n - 1)}],
-    & ~ .right-arrow[for=slide#{custom-modulo($n + 1)}] {
-      display: block;
+    
+    .credit {
+        margin-top: 1rem;
+        color: rgba(0, 0, 0, 0.5);
+        display: block;        
     }
+    
+    &.scrollable {
+        overflow-y: scroll;
+    }
+}
+
+.carousel__thumbnails {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    
+    margin: 0 -10px;
+    
+    .carousel__slides + & {
+        margin-top: 20px;
+    }
+    
+    li {        
+        flex: 1 1 auto;
+        max-width: calc((100% / 6) - 20px);  
+        margin: 0 10px;
+        transition: all 300ms ease-in-out;
+    }
+    
+    label {
+        display: block;
+        @include aspect-ratio(1,1);
+        
+                  
+        &:hover,
+        &:focus {
+            cursor: pointer;
+            
+            img {
+                box-shadow: 0px 0px 0px 1px rgba(0,0,0,0.25);
+                transition: all 300ms ease-in-out;
+            }
+        }
+    }
+    
+    img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}/* Add this media query to handle screens under 500 pixels */
+@media screen and (max-width: 786px) {
+ 
+
+
+  .carousel__slide figcaption {
+    width: 300px;
+    height: 300px;
   }
-}
 
-
-
-/* Add this CSS to position the titles over the images and style them */
-.carousel li {
-  position: relative;
-}
-
-.carousel li h3 {
-  position: absolute;
-  top: 10px; /* Updated to top */
-  left: 10px;
-  color: white;
-  font-size: 24px;
-  font-weight: bold;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 8px;
-  border-radius: 5px;
-  margin: 0;
-}
-.voir-plus-button {
-  position: absolute;
-  bottom: 10px;
-  right: 10px;
-  padding: 8px 16px;
-  background-color: #a2cce8;
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-}
-
-.voir-plus-button:hover {
-  background-color: #2980b9;
-}
-
-@media(max-width:500px){
-  .carousel li h3 {
-    font-size: 14px;
+  .carousel__thumbnails li {
+    max-width: 100%;
+    margin: 0 5px;
   }
-  .voir-plus-button {
-    padding: 8px 10px;
-  }
-}/* Add this CSS to add more space between sections */
+
+}
