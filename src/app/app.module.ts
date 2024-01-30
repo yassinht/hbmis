@@ -21,6 +21,8 @@ import { LandingComponent } from './views/landing/landing.component';
 import { ContactComponent } from './views/contact/contact.component';
 import { ProductsComponent } from './views/products/products.component';
 import { ClientsComponent } from './views/clients/clients.component';
+import { ProductDetailsComponent } from './views/product-details/product-details.component';
+import { BlogsComponent } from './views/blogs/blogs.component';
 
 // Create a function for loading translations
 export function HttpLoaderFactory(http: HttpClient) {
@@ -39,7 +41,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     FaqComponent,
     LandingComponent,
     VideoCarouselComponent,
-    TeamComponent,ClientsComponent,
+    TeamComponent,ClientsComponent, ProductDetailsComponent, BlogsComponent,
   
   ],
   imports: [

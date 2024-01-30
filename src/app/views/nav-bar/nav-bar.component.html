@@ -1,12 +1,12 @@
  <!-- Navigation-->
- <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
-    <div class="container" >
+ <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav" role="navigation">
+  <div class="container" >
         <a class="navbar-brand" href="#page-top"><img src="../../../assets/img/Frame.webp" alt="..." /></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Menu">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           Menu
           <i class="fas fa-bars ms-1"></i>
-      </button>
-      
+       </button>
+       
       
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
@@ -16,12 +16,13 @@
               <li class="nav-item"><a class="nav-link" aria-label="Produits" href="#product">{{'navbar.item4' | translate}}</a></li>
                 <li class="nav-item"><a class="nav-link" aria-label="contact" href="#contact">{{'navbar.item6' | translate}}</a></li>
                 <li class="nav-item" style="position: absolute; top: 50%; transform: translateY(-50%); right: 0; margin-right: 70px;">
-                  <div class="dropdown language-dropdown">
-                    <button class="btn  dropdown-toggle"  type="button" id="languageDropdown" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Langues">
+                  <div class="dropdown language-dropdown" role="menu">
+                    <button class="btn dropdown-toggle" type="button" id="languageDropdown" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Langues" aria-haspopup="true">
                       <img [src]="selectedLanguage === 'fr' ? '../../../assets/img/fr.svg' : '../../../assets/img/gb.svg'" alt="{{ selectedLanguage === 'fr' ? 'French' : 'English' }}" class="flag-icon">
                       {{ selectedLanguage.toUpperCase() }}
-                    </button>
-                    <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                   </button>
+                   
+                    <ul class="dropdown-menu" aria-labelledby="languageDropdown" role="menu">
                       <li><a class="dropdown-item" href="#"  aria-label="Français" (click)="changeLanguage('fr')"><img src="../../../assets/img/fr.svg" alt="French" class="flag-icon">Français</a></li>
                       <li><a class="dropdown-item" href="#" aria-label="Anglais" (click)="changeLanguage('en')"><img src="../../../assets/img/gb.svg" alt="English" class="flag-icon">Anglais</a></li>
                     </ul>
@@ -35,7 +36,7 @@
                 
               </li>
               <li  class="nav-item faq" style="position: absolute; top: 50%; transform: translateY(-50%); right: 0;margin-right: 20px" routerLink="faq">
-                <a class="nav-link">FAQ</a>
+                <a class="nav-link ">FAQ</a>
               </li>
             </ul>
            

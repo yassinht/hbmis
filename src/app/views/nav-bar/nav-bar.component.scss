@@ -61,10 +61,14 @@
   cursor: pointer;
 }
 
-/* Hover effect for the FAQ link */
-.faq .nav-link:hover {
-  background-color: white; /* Change background color on hover */
-  color: #48BAC3 !important; /* Change text color on hover */
-  border: 1px solid #48BAC3;
-}
 
+
+#mainNav.navbar-shrink .navbar-nav .nav-item.faq .nav-link:hover {
+  color: #171616 !important;
+  background-color: #ffffff !important;
+}
+ .navbar-nav .nav-item.faq .nav-link:hover {
+  color: #171616 !important;
+  background-color: #ffffff !important;
+   border: 1px solid  #48BAC3 ;
+}

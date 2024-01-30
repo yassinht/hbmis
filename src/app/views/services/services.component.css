@@ -44,7 +44,10 @@ p {
   display: grid;
   place-items: center;
   transition: 0.5s;
+
 }
+.icon-wrapper img{
+width: 50%;}
 .card:hover {
   background-position: 0 100%;
 }

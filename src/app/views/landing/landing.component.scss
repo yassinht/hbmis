@@ -139,7 +139,7 @@ justify-content: center;
       .article-body {
         padding: 24px;
       }
-      
+
       article a {
         display: inline-flex;
         align-items: center;
@@ -264,4 +264,12 @@ justify-content: center;
   }
   
 
-  
+
+// #portfolio .portfolio-item .portfolio-caption .portfolio-caption-subheading i {
+//   color: #0a98b4 !important;
+// }
+#portfolio .portfolio-item .portfolio-caption .portfolio-caption-subheading .fa-clock,
+#portfolio .portfolio-item .portfolio-caption .portfolio-caption-subheading .fa-calendar,
+#portfolio .portfolio-item .portfolio-caption .portfolio-caption-subheading .fa-file-alt {
+  color: #0a98b4;
+}

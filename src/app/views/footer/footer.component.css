@@ -63,7 +63,7 @@ ul {
 }
 .footer-social-icon a {
   color: #fff;
-  font-size: 16px;
+  font-size: 25px;
   margin-right: 15px;
 }
 .footer-social-icon i {
@@ -73,14 +73,10 @@ ul {
   line-height: 38px;
   border-radius: 50%;
 }
-.facebook-bg{
-  background: #3B5998;
-}
-.twitter-bg{
-  background: #55ACEE;
-}
-.google-bg{
-  background: #DD4B39;
+
+.footer-social-icon a:hover{
+  color: #48BAC3;
+
 }
 .footer-widget-heading h3 {
   color: #fff;

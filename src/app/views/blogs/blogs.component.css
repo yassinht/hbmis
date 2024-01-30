@@ -1,0 +1,80 @@
+/* Add this CSS to your stylesheet or in a <style> tag in your HTML */
+
+/* Styling for the main container */
+.page-section {
+    background-color: #f8f9fa; /* Set the background color as needed */
+    padding: 50px 0; /* Adjust the padding as needed */
+    margin: 3rem;
+}
+
+/* Styling for the first horizontal card */
+.card {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid #ced4da; /* Set the border color as needed */
+    border-radius: 10px; /* Adjust the border-radius as needed */
+    overflow: hidden;
+    margin-bottom: 20px; /* Adjust the margin as needed */
+}
+
+.card-block {
+    padding: 20px;
+}
+
+.card-title {
+    font-size: 1.5rem; /* Adjust the font size as needed */
+}
+
+.card-text {
+    margin-bottom: 15px; /* Adjust the margin as needed */
+}
+
+/* Styling for the carousel */
+.carousel-inner img {
+    width: 100%;
+    border-radius: 10px; /* Adjust the border-radius as needed */
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: #007bff; /* Set the control button background color as needed */
+    border-radius: 50%; /* Make the control button circular */
+}
+
+/* Styling for the small cards */
+.card.float-left,
+.card.float-right {
+    margin-bottom: 20px; /* Adjust the margin as needed */
+}
+
+/* Styling for the small card image */
+.card.float-left .col-sm-5 img,
+.card.float-right .col-sm-5 img {
+    border-radius: 10px 0 0 10px; /* Adjust the border-radius as needed */
+}
+
+/* Styling for the small card content */
+.card.float-left .col-sm-7,
+.card.float-right .col-sm-7 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Styling for the "Read More" button */
+.btn-primary {
+    background-color: #007bff; /* Set the button background color as needed */
+    border-color: #007bff; /* Set the button border color as needed */
+}
+
+.btn-primary:hover {
+    background-color: #0056b3; /* Set the button background color on hover as needed */
+    border-color: #0056b3; /* Set the button border color on hover as needed */
+}
+
+/* Clearfix for the floats */
+.container::after {
+    content: "";
+    clear: both;
+    display: table;
+}
