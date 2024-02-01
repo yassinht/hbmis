@@ -16,15 +16,13 @@ const routes: Routes = [
   { path: 'produit', component: ProductsComponent }, // Route for FAQ component
   {path:'contact',component:ContactComponent},
   {path:'faq',component:FaqComponent},
-  {path:'details',component:ProductDetailsComponent},
-  {path:'blogs',component:BlogsComponent},
-
+  { path: 'product-info/:productName', component: ProductDetailsComponent },
 
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes, {
-    initialNavigation: 'enabled'
+    initialNavigation: 'enabled',useHash: true 
 })],
   exports: [RouterModule]
 })
