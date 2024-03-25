@@ -10,11 +10,11 @@
         
           <div class="collapse navbar-collapse" id="navbarResponsive">
               <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
-                <li class="nav-item"><a class="nav-link "  aria-label="Acceuil" href="#home">{{'navbar.item1' | translate}}</a></li>
-                <li class="nav-item"><a class="nav-link" aria-label="Portfolio" href="#portfolio">{{'navbar.item2' | translate}}</a></li>
+                <li class="nav-item"><a class="nav-link "  aria-label="Acceuil" [routerLink]="['/']">{{'navbar.item1' | translate}}</a></li>
+                <li class="nav-item"><a class="nav-link" aria-label="Portfolio" [routerLink]="['/']">{{'navbar.item2' | translate}}</a></li>
                 <!-- <li class="nav-item"><a class="nav-link" href="#services">{{'navbar.item3' | translate}}</a></li> -->
-                <li class="nav-item"><a class="nav-link" aria-label="Produits" href="#product">{{'navbar.item4' | translate}}</a></li>
-                  <li class="nav-item"><a class="nav-link" aria-label="contact" href="#contact">{{'navbar.item6' | translate}}</a></li>
+                <li class="nav-item"><a class="nav-link" aria-label="Produits" [routerLink]="['/']">{{'navbar.item4' | translate}}</a></li>
+                  <li class="nav-item"><a class="nav-link" aria-label="contact" [routerLink]="['/']">{{'navbar.item6' | translate}}</a></li>
                   <li class="nav-item" style="position: absolute; top: 50%; transform: translateY(-50%); right: 0; margin-right: 70px;">
 
                     
@@ -122,61 +122,90 @@
     
     </ul>
 
+    <section class="page-section bg-light" id="team">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-heading text-uppercase">Caractéristiques</h2>
 
-
-
-    <div class="container py-3">
-        <div class="title h2 text-center">Autres Produits</div>
-        
-        <!-- Card Start -->
-        <div class="card">
+                <h3 class="section-subheading text-muted">{{ productName }}</h3>
+            </div>
             <div class="row">
-                <!-- Iterate over otherProducts and display each product -->
-                <div *ngFor="let product of otherProducts.slice(2)"class="col-md-6 px-3">
-                    <div class="card-block px-4">
-                        <div class="container">
-                            <div class="card float-left">
-                                <div class="row">
-                                    <div class="col-sm-7">
-                                        <div class="card-block">
-                                            <p>{{ product.description | slice:0:100 }}...</p>
-                                            <a [routerLink]="['/product-info', product.name]"class="btn btn-primary btn-sm"(click)="scrollToTop()">Read More</a>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-5">
-                                        <img class="d-block w-100" [src]="'../../../assets/img/' + product.image" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                <div class="col-lg-4">
+                    <div class="team-member">
+                        <i class="fas fa-user mx-auto rounded-circle fa-5x"></i>
+                        <h4>Parveen Anand</h4>
+                        <p class="text-muted">Stimulation ciblée</p>
                     </div>
                 </div>
-                <!-- End of Product Cards -->
-                <!-- Carousel start -->
-                <div class="col-md-6">
-                    <div id="CarouselTest" class="carousel slide" data-ride="carousel">
-                        <ol class="carousel-indicators">
-                            <li *ngFor="let product of products.slice(0, 3); let i = index" data-target="#CarouselTest" [attr.data-slide-to]="i" [class.active]="i === 0"></li>
-                        </ol>
-                        <div class="carousel-inner">
-                            <div *ngFor="let product of products.slice(0, 3); let i = index" class="carousel-item" [class.active]="i === 0">
-                                <img class="d-block w-100" [src]="'../../../assets/img/' + product.image" alt="">
-                            </div>
-                        </div>
-                        <a class="carousel-control-prev" href="#CarouselTest" role="button" data-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Previous</span>
-                        </a>
-                        <a class="carousel-control-next" href="#CarouselTest" role="button" data-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Next</span>
-                        </a>
+                <div class="col-lg-4">
+                    <div class="team-member">
+                        <i class="fas fa-heartbeat mx-auto rounded-circle fa-5x"></i>
+                        <h4>Diana Petersen</h4>
+                        <p class="text-muted">Amélioration de la circulation sanguine</p>
                     </div>
                 </div>
-                
-                <!-- End of carousel -->
+                <div class="col-lg-4">
+                    <div class="team-member">
+                        <i class="fas fa-dumbbell mx-auto rounded-circle fa-5x"></i>
+                        <h4>Larry Parker</h4>
+                        <p class="text-muted">Renforcement musculaire</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <p class="large text-muted">
+                        Le {{ productName }} est un stimulateur biofeedback abdomino-périnéal, associé au Winner Flow, offrant des caractéristiques telles que la stimulation ciblée, l'amélioration de la circulation sanguine et le renforcement musculaire.
+                    </p>
+                </div>
             </div>
         </div>
-        <!-- End of card -->
+    </section>
+    
+    
+
+    <ul class="timeline">
+        <li>
+            <div class="timeline-panel">
+                <div class="timeline-heading">
+                </div>
+            </div>
+        </li>
+    
+    
+    
+    </ul>
+
+
+    <section class="page-section bg-light" id="product">
+        <div class="container">
+          <div class="text-center">
+              <h2 class="section-heading text-uppercase">Autres Produits</h2>
+              <!-- <h3 class="section-subheading text-muted">Notre Produts Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim eius minus adipisci iusto ipsa vitae ipsam, </h3> -->
+          </div>
+    <!-- product-list.component.html -->
+    
+    <div class="articles">
+      <article *ngFor="let product of otherProducts">
+        <div class="article-wrapper">
+          <figure>
+            <img [src]="product.image" alt="{{ product.name }}">
+          </figure>
+          <div class="article-body">
+            <h4>{{ product.name }}</h4>
+            <!-- Use Angular router link to navigate to dynamic product details page -->
+            <a [routerLink]="['/product-info', product.name]" class="read-more" (click)="scrollToTop()">
+              Read more <span class="sr-only">about {{ product.name }}</span>
+              <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </article>
     </div>
+    
+        </div>
+          </section>
+    
     

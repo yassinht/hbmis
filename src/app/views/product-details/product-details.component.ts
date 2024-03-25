@@ -16,9 +16,9 @@ export class ProductDetailsComponent implements OnInit {
     { name: 'Winner Flow', image: '../../../assets/img/sflow1.png', description: 'Le Winner Flow est un embout d\'exsufflation utilisé lors d\'exercices respiratoires. Il assure un débit ventilatoire constant.' },
     { name: 'STIM-Flow', image: '../../../assets/img/sflow2.png', description: 'Le STIMFLOW® est un stimulateur biofeedback abdomino-périnéal, associé au Winner Flow, permettant de rééduquer les pathologies de la statique pelvienne.' },
     { name: 'Scores', image: '../../../assets/img/score.png', description: 'Application de Scores et d\'Échelles d\'auto-évaluation référencés scientifiquement pour les professionnels de santé.' },
-    { name: 'e1', image: '../../../assets/img/e1.webp', description: 'Application de Scores et d\'Échelles d\'auto-évaluation référencés scientifiquement pour les professionnels de santé.' },
-    { name: 'e2', image: '../../../assets/img/e2.webp', description: 'Application de Scores et d\'Échelles d\'auto-évaluation référencés scientifiquement pour les professionnels de santé.' },
-    { name: 'e3', image: '../../../assets/img/e3.webp', description: 'Application de Scores et d\'Échelles d\'auto-évaluation référencés scientifiquement pour les professionnels de santé.' },
+    { name: 'electrode abdominales', image: '../../../assets/img/e1.webp', description: 'Application de Scores et d\'Échelles d\'auto-évaluation référencés scientifiquement pour les professionnels de santé.' },
+    { name: 'electrode abdominales diastasis', image: '../../../assets/img/e2.webp', description: 'Application de Scores et d\'Échelles d\'auto-évaluation référencés scientifiquement pour les professionnels de santé.' },
+    { name: 'electrode périnéales réutilisables', image: '../../../assets/img/e3.webp', description: 'Application de Scores et d\'Échelles d\'auto-évaluation référencés scientifiquement pour les professionnels de santé.' },
 
 
   ];
