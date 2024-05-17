@@ -6,8 +6,8 @@ import { CarouselComponent } from 'ngx-owl-carousel-o';
 import { ServicesComponent } from './views/services/services.component';
 import { ContactComponent } from './views/contact/contact.component';
 import { LandingComponent } from './views/landing/landing.component';
-import { ProductDetailsComponent } from './views/product-details/product-details.component';
-import { BlogsComponent } from './views/blogs/blogs.component';
+import { WinnerFlowDetailsComponent } from './views/winner-flow-details/winner-flow-details.component';
+import { StimFlowDetailsComponent } from './views/stim-flow-details/stim-flow-details.component';
 
 const routes: Routes = [
   {path:'',component:LandingComponent},
@@ -16,7 +16,9 @@ const routes: Routes = [
   { path: 'produit', component: ProductsComponent }, // Route for FAQ component
   {path:'contact',component:ContactComponent},
   {path:'faq',component:FaqComponent},
-  { path: 'product-info/:productName', component: ProductDetailsComponent },
+  // { path: 'product-info/:productName', component: ProductDetailsComponent },
+{path:'product-info/winner-flow',component:WinnerFlowDetailsComponent},
+{path:'product-info/stim-flow',component:StimFlowDetailsComponent}
 
 ];
 

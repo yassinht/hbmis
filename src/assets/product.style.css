@@ -1,0 +1,633 @@
+header.masthead {
+    position: relative;
+    padding-top: 10.5rem;
+    padding-bottom: 6rem;
+    text-align: center;
+    color: #fff;
+    background-image: linear-gradient(rgba(181, 193, 203, 0.326), rgba(154, 177, 199, 0.326)), url("./img/Mask.webp");
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center center;
+    background-size: cover;
+    
+  }
+  
+  header.masthead .masthead-subheading {
+    font-size: 1.5rem;
+    font-style: italic;
+    line-height: 1.5rem;
+    margin-bottom: 25px;
+    font-family: "Inika", "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
+  
+}
+  
+  header.masthead .masthead-heading {
+    font-size: 3.25rem;
+    font-weight: 400 !important;
+    line-height: 3.25rem;
+    margin-bottom: 2rem;
+    font-family: "Inika", "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
+  }
+  
+  header.masthead::after {
+    display: none;
+  }
+  
+
+  /* Adjust styling as needed */
+  .product-def-section {
+    padding: 6rem 0;
+    background-color: #EFF6FA;
+
+    transition: box-shadow 0.3s ease-in-out;
+  }
+
+  .product-use-section{
+    padding: 6rem 0;
+    background-color: white;
+
+    transition: box-shadow 0.3s ease-in-out;
+  }
+
+
+
+  .product-def{
+    background-color: #EFF6FA;
+
+  }
+  .product-details-section:hover {
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15); /* Shadow on hover */
+  }
+  
+  .product-details-section h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 1rem;
+    line-height: 50px;
+  }
+  
+  .product-details-section p {
+    font-size: 1.25rem;
+    line-height: 1.9;
+    color: #555;
+  }
+
+  .text-muted{
+ color: #212529 !important;
+ font-size: 18px !important;
+  }
+  .question{
+    font-size: 32px !important;
+    color: #48BAC3 !important;
+  }
+  .product-details-section img.product-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    transition: transform 0.3s ease-in-out;
+    margin-top: 12%;
+  }
+  
+  .product-details-section img.product-image:hover {
+    transform: scale(1.05);
+  }
+  
+  .product-details-section .text-details {
+    padding: 2rem;
+  }
+  
+  .product-details-section .video-container {
+    position: relative;
+    overflow: hidden;
+    max-width: 100%;
+    border-radius: 12px;
+  
+  }
+  
+  .product-details-section .embed-responsive {
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Enhanced video shadow */
+  }
+  
+  .product-details-section .embed-responsive iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 12px;
+  }
+  
+  /* Improved spacing and structure for responsiveness */
+  
+  /* Media query for screens with a max-width of 400px */
+  @media (max-width: 400px) {
+    h2, .section-heading {
+        font-size: 20px !important;
+    }
+  }
+  @media (max-width: 768px) {
+    .product-details-section .row {
+        flex-direction: column;
+    }
+  
+  
+    .product-details-section .col-lg-6 {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+  
+    .product-details-section .col-lg-12 {
+        width: 100%;
+    }
+  }
+  /* Add this CSS to your stylesheet or in a <style> tag in your HTML */
+  
+  /* Styling for the main container */
+  .page-section {
+    background-color: #f8f9fa; /* Set the background color as needed */
+    padding: 50px 0; /* Adjust the padding as needed */
+    margin: 0rem;
+  }
+  
+  /* Styling for the first horizontal card */
+  .card {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid #ced4da; /* Set the border color as needed */
+    border-radius: 10px; /* Adjust the border-radius as needed */
+    overflow: hidden;
+    margin-bottom: 20px; /* Adjust the margin as needed */
+  }
+  
+  .card-block {
+    padding: 20px;
+  }
+  
+  .card-title {
+    font-size: 1.5rem; /* Adjust the font size as needed */
+  }
+  
+  .card-text {
+    margin-bottom: 15px; /* Adjust the margin as needed */
+  }
+  
+  /* Styling for the carousel */
+  .carousel-inner img {
+    width: 100%;
+    border-radius: 10px; /* Adjust the border-radius as needed */
+  }
+  
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    background-color: #007bff; /* Set the control button background color as needed */
+    border-radius: 50%; /* Make the control button circular */
+  }
+  
+  /* Styling for the small cards */
+  .card.float-left,
+  .card.float-right {
+    margin-bottom: 20px; /* Adjust the margin as needed */
+  }
+  
+  /* Styling for the small card image */
+  .card.float-left .col-sm-5 img,
+  .card.float-right .col-sm-5 img {
+    border-radius: 10px 0 0 10px; /* Adjust the border-radius as needed */
+  }
+  
+  /* Styling for the small card content */
+  .card.float-left .col-sm-7,
+  .card.float-right .col-sm-7 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  /* Styling for the "Read More" button */
+  .btn-primary {
+    background-color: #007bff; /* Set the button background color as needed */
+    border-color: #007bff; /* Set the button border color as needed */
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3; /* Set the button background color on hover as needed */
+    border-color: #0056b3; /* Set the button border color on hover as needed */
+  }
+  
+  /* Clearfix for the floats */
+  .container::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  #mainNav.navbar{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background-color: #212529;
+  }
+  #mainNav .navbar-nav .nav-item .nav-link {
+    font-size: 0.95rem;
+    color: rgb(255, 255, 255);
+  }
+  
+  article {
+    --img-scale: 1.001;
+    --title-color: black;
+    --link-icon-translate: -20px;
+    --link-icon-opacity: 0;
+    position: relative;
+    border-radius: 16px;
+    box-shadow: none;
+    background: #fff;
+    transform-origin: center;
+    transition: all 0.4s ease-in-out;
+    overflow: hidden;
+    font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  
+  }
+  
+  article a::after {
+    position: absolute;
+    inset-block: 0;
+    inset-inline: 0;
+    cursor: pointer;
+    content: "";
+  }
+  
+  /* basic article elements styling */
+  article h2 {
+    margin: 0 0 18px 0;
+    font-family: "Bebas Neue", cursive;
+    font-size: 1.9rem;
+    letter-spacing: 0.06em;
+    color: #000E44;
+    transition: color 0.3s ease-out;
+    font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  
+  }
+  
+  figure {
+    margin: 0;
+    padding: 0;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+  }
+  
+  article img {
+    max-width: 100%;
+    transform-origin: center;
+    transform: scale(var(--img-scale));
+    transition: transform 0.4s ease-in-out;
+  }
+  
+  .article-body {
+    padding: 24px;
+  }
+  
+  article a {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    color: #28666e;
+  }
+  
+  article a:focus {
+    outline: 1px dotted #28666e;
+  }
+  
+  article a .icon {
+    min-width: 24px;
+    width: 24px;
+    height: 24px;
+    margin-left: 5px;
+    transform: translateX(var(--link-icon-translate));
+    opacity: var(--link-icon-opacity);
+    transition: all 0.3s;
+  }
+  
+  /* using the has() relational pseudo selector to update our custom properties */
+  article:has(:hover, :focus) {
+    --img-scale: 1.1;
+    --title-color: #28666e;
+    --link-icon-translate: 0;
+    --link-icon-opacity: 1;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  }
+  
+  
+  
+  /************************ 
+  Generic layout (demo looks)
+  **************************/
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    padding: 48px 0;
+    font-family: "Figtree", sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+    background-image: linear-gradient(45deg, #7c9885, #b5b682);
+    min-height: 100vh;
+  }
+  
+  .articles {
+    display: grid;
+    max-width: 1200px;
+    margin-inline: auto;
+    padding-inline: 24px;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 24px;
+  }
+  
+  @media screen and (max-width: 960px) {
+    article {
+      container: card/inline-size;
+    }
+    .article-body p {
+      display: none;
+    }
+  }
+  @container card (min-width: 380px) {
+    .article-wrapper {
+      display: grid;
+      grid-template-columns: 100px 1fr;
+      gap: 16px;
+    }
+    .article-body {
+      padding-left: 0;
+    }
+    figure {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+    figure img {
+      height: 100%;
+      aspect-ratio: 1;
+      object-fit: cover;
+    }
+  }
+  
+  .sr-only:not(:focus):not(:active) {
+    clip: rect(0 0 0 0); 
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap; 
+    width: 1px;
+  }@media screen and (max-width: 400px) {
+    .articles {
+      grid-template-columns: 1fr;
+    }
+    
+    article {
+      container: card/inline-size;
+    }
+    
+    .article-body p {
+      display: none;
+    }
+    
+    .article-wrapper {
+      display: block;
+    }
+    
+    .article-body {
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+    
+    figure {
+      width: 100%;
+      height: auto;
+      overflow: hidden;
+    }
+    
+    figure img {
+      height: auto;
+      width: 100%;
+      aspect-ratio: unset;
+      object-fit: contain;
+    }
+  }
+  
+  .image-carousel {
+    display: flex; /* Enable horizontal scrolling */
+    overflow-x: scroll; /* Hide scrollbar if not needed */
+    scroll-snap-type: x mandatory; /* Enable snapping */
+  }
+  /* Ensure high specificity for `.item` styles */
+.image-carousel .item {
+    flex-shrink: 0;
+    width: auto; /* Allow natural image width */
+    height: 40vh; /* Adjust height as needed */
+    background-color: #FFF;
+    position: relative; /* Allow caption positioning */
+    overflow: hidden; /* Hide overflowing content in caption */
+    box-sizing: border-box; /* Include border in sizing */
+    border-radius: 5px; /* Adjust value as needed */ /* High specificity */
+  }
+  
+  /* Maintain margins for better visual separation (optional) */
+  .image-list li {
+    margin-right: 5px; /* Adjust spacing as desired */
+    color: #000E44 !important; /* You can change 'blue' to any color you prefer */
+
+  }
+
+ .text-details li {
+    color: #000E44 !important; /* You can change 'blue' to any color you prefer */
+    line-height: 2 !important; /* You can adjust the line height as needed */
+
+  }
+  
+  
+  /* Additional image overflow handling (optional) */
+  .img-fluid {
+    object-fit: contain; /* Maintain aspect ratio */
+  }
+  .image-list {
+    display: flex;
+    list-style: none;
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    scroll-snap-type: x mandatory; /* Enable snapping */
+  }
+  
+  .item {
+    flex-shrink: 0; /* Prevent items from shrinking */
+    width: auto; /* Allow natural image width */
+    height: 40vh; /* Adjust height as needed */
+    background-color: #FFF;
+    position: relative; /* Allow caption positioning */
+    overflow: hidden; /* Hide overflowing content in caption */
+    
+  }
+  
+  .img-fluid {
+    width: 100%; /* Ensure image fills item container width */
+    max-height: 100%; /* Prevent image from exceeding item height */
+    object-fit: contain; /* Maintain aspect ratio within item */
+  }
+  
+  .caption {
+    position: absolute; /* Position caption at the bottom */
+    bottom: 0; /* Align to bottom of item */
+    left: 0; /* Align to left of item */
+    width: 100%; /* Span full width of item */
+    height: 30%; /* Set caption height as desired */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    color: #fff; /* Light text color for better readability */
+    padding: 10px; /* Add some padding for text */
+    text-align: center; /* Center text within caption */
+  }
+  .section-heading{
+    line-height: 50px;
+    margin: 10px;
+    color: #48BAC3;
+  }
+
+  
+  .image-and-title-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 40px; /* Add more space between title and numbers */
+  }
+
+  .winner-flow-icon {
+    max-width: 200px; /* Set maximum width for the image */
+  }
+  
+  .flow-numbers {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+  }
+  
+  .flow-numbers .number-item {
+    text-align: center;
+    position: relative;
+    margin-right: 20px; /* Add space between number and text */
+  }
+  
+  .flow-numbers .number-item h1.number {
+    font-size: 200px; /* Decrease size of number */
+    font-weight: bold; /* Make number bold */
+  }
+  
+  .flow-numbers .number-item p.description {
+    position: absolute;
+    top: -40px; /* Adjust the top position */
+    left: 120%; /* Position text to the right of the number */
+    margin: 0;
+    font-size: smaller;
+    width: 150px; /* Adjust width as needed */
+    text-align: left;
+    color: #000E44;
+  }
+  
+  @media (max-width: 992px) {
+    .flow-numbers .number-item h1.number {
+      font-size: 150px; /* Adjust size for medium screens */
+    }
+    
+    .flow-numbers .number-item p.description {
+      font-size: smaller;
+      width: 100%; /* Adjust width for medium screens */
+      left: 100%; /* Position text to the right for medium screens */
+      top: -30px; /* Adjust top position for medium screens */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .winner-flow-icon {
+      opacity: 0.8; /* Adjust the opacity value as needed (from 0 to 1) */
+    }
+    
+    .winner-flow-icon {
+      display: none; /* Hide the image for small screens */
+    }
+
+    .image-and-title-container {
+      margin-bottom: 20px; /* Reduce margin for small screens */
+      line-height: 5px;
+    }
+
+    .flow-numbers {
+      flex-direction: column;
+      align-items: flex-start; /* Align items to the start */
+      margin-bottom: 50px;
+    }
+    
+    .flow-numbers .number-item {
+      margin-right: 0; /* Remove margin for small screens */
+      margin-bottom: 20px; /* Add space between each number-item for small screens */
+      margin-bottom: 50px;
+
+    }
+    
+    .flow-numbers .number-item p.description {
+      position: static;
+      text-align: center; /* Align text to the left */
+      margin-top: 10px;
+      width: auto;
+      margin-top: 50px;
+      font-size: xx-large;
+
+    }
+  }
+  .image-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Four columns with equal width */
+    justify-content: center; /* Already included, centers content within the grid */
+    gap: calc(10px + 5vw); /* Adjust the gap between images */
+    margin: auto; /* This replaces the separate margin properties */
+  }
+  
+  
+  
+  .image-grid img {
+    max-width: 40%; /* Ensure images don't exceed the container width */
+    height: auto; /* Maintain aspect ratio */
+  }
+  .product-def-section,
+.product-use-section {
+  display: flex;
+  justify-content: center; /* Horizontally center content */
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: calc(10px + 5vw); /* Adjust the gap between images */
+}
+
+.image-grid img {
+  max-width: 60%;
+  height: auto;
+}
+.colored-text{
+  color:#48BAC3; /* You can change 'blue' to any color you prefer */
+
+}
+.colored-h2{
+  color: #000E44; /* You can change 'blue' to any color you prefer */
+
+}

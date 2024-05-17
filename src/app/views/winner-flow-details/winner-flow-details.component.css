@@ -1,0 +1,9 @@
+@import url(../../../assets/product.style.css);
+
+.winner-flow-section {
+  padding: 64px 0;
+  background-image: url("../../../assets/img/mode-image2.svg");
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-size: contain;
+}

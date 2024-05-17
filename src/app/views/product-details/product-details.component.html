@@ -1,3 +1,7 @@
+ 
+ 
+ <!-- **************************this page is for dynamic content if there is so much products *******************************************-->
+ 
  <!-- Navigation-->
  <nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar-shrink" id="mainNav" role="navigation">
     <div class="container" >
@@ -41,8 +45,8 @@
        <!-- Masthead-->
         <header class="masthead" id="top"  #topElement>
             <div class="container">
-                <div class="masthead-subheading">Our Products</div>
-                <div class="masthead-heading text-uppercase">discover our produt</div>
+                <!-- <div class="masthead-subheading">Our Products</div> -->
+                <div class="masthead-heading text-uppercase">{{ productName }}</div>
                 <!-- <a class="btn btn-primary btn-xl text-uppercase" >Tell Me More</a> -->
             </div>
             
@@ -64,10 +68,8 @@
 
             <!-- Image on the right -->
             <div class="col-lg-6">
-                <img *ngIf="selectedProduct" [src]="'../../../assets/img/' + selectedProduct.image" alt="Product Image" class="img-fluid product-image">
-                <div *ngIf="!selectedProduct">
-                  <p>No product found for the given name.</p>
-                </div>
+                <img  src='../../../assets/img/winner-flow-det.svg' alt="Product Image" class="img-fluid product-image">
+
               </div>
               
             <ul class="timeline">

@@ -1,0 +1,29 @@
+@import url(../../../assets/product.style.css);
+.text-font{
+    font-family: 'Brush Script MT', cursive;
+ font-size:  3dvh;
+}
+.kit li{
+
+    font-size: 3dvh;
+}
+.container-img {
+    display: flex;
+}
+
+.container-img img {
+    width: 40%; /* Adjust the width as needed */
+    margin-right: 10px; /* Optional: Add spacing between the images */
+}
+
+.patholo ul {
+    list-style-type: none; /* Remove bullet points */
+    margin: 5px;
+    color:#000E44 ;
+    line-height: 2;
+}
+
+h2 {
+    font-family: "Inika", sans-serif;
+  }
+  

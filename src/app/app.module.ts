@@ -23,6 +23,8 @@ import { ProductsComponent } from './views/products/products.component';
 import { ClientsComponent } from './views/clients/clients.component';
 import { ProductDetailsComponent } from './views/product-details/product-details.component';
 import { BlogsComponent } from './views/blogs/blogs.component';
+import { WinnerFlowDetailsComponent } from './views/winner-flow-details/winner-flow-details.component';
+import { StimFlowDetailsComponent } from './views/stim-flow-details/stim-flow-details.component';
 
 // Create a function for loading translations
 export function HttpLoaderFactory(http: HttpClient) {
@@ -41,7 +43,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     FaqComponent,
     LandingComponent,
     VideoCarouselComponent,
-    TeamComponent,ClientsComponent, ProductDetailsComponent, BlogsComponent,
+    TeamComponent,ClientsComponent, ProductDetailsComponent, BlogsComponent, WinnerFlowDetailsComponent, StimFlowDetailsComponent,
   
   ],
   imports: [
